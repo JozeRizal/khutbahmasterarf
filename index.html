@@ -24,5 +24,12 @@
         });
       }
     </script>
+
+    <script>
+      window.addEventListener('vite:preloadError', (event) => {
+        // Otomatis refresh halaman jika gagal memuat file (chunk error) karena sinyal atau cache
+        window.location.reload(); 
+      });
+    </script>
   </body>
 </html>
